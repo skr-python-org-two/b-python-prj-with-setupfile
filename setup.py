@@ -20,30 +20,25 @@ import setuptools
 GH_USERNAME = os.getenv("GH_USERNAME")
 GH_TOKEN = os.getenv("GH_TOKEN")
 
-
 PACKAGE_REQUIREMENTS = [
     "PyYAML==6.0",
     "pysftp==0.2.9",
     "boto3==1.34.51",
     "wheel",
-    f"python_generic_func_library @ git+https://{GH_USERNAME}:{GH_TOKEN}@github.com/skr-python-org/python_generic_func_library.git@main"
-
+    f"python-generic-functon-library @ git+https://{GH_USERNAME}:{GH_TOKEN}@github.com/skr-python-org-two/python-generic-functon-library.git@v1.0.4"
 ]
 
 DEV_REQUIREMENTS = [
     "pytest == 7.1.3",
     "pandas == 1.5.0",
-    "numpy == 1.23.1",
     "pytest-cov == 3.0.0",
     "python-dotenv == 1.0.0"
 ]
 
 
-
 current_dir = pathlib.Path(__file__).parent.resolve()
 #long_description = (current_dir / 'README.md').read_txt(encoding="utf-8")
 long_description = "test project "
-
 
 setuptools.setup(
     name="b-python-prj-with-setupfile",

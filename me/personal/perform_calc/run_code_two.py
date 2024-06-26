@@ -1,6 +1,6 @@
 
 import os
-from custom.functs.math_functs import s_add_square , s_sub_square
+from python-generic-functon-library-two-custom-code.custom.functs.math_functs import s_add_square , s_sub_square
 
 
 

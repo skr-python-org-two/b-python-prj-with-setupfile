@@ -45,9 +45,6 @@ jobs:
       - name: List installedDependencies With Their Installed Path
         run: |
           pip list -v
-      - name: List installedDependencies With Their Installed Path For NewLibs
-        run: |
-          echo `pip list -v | grep -i "python-generic-function"`
       - name: Run Unit tests
         run: |
           pytest me/personal --cov

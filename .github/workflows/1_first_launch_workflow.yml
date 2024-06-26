@@ -42,6 +42,12 @@ jobs:
       - name: List installedDependencies
         run: |
           pip list
+      - name: List installedDependencies With Their Installed Path
+        run: |
+          pip list -v
+      - name: List installedDependencies With Their Installed Path For NewLibs
+        run: |
+          pip list -v | grep -i "*python-generic-function*"
       - name: Run Unit tests
         run: |
           pytest me/personal --cov
@@ -72,6 +78,7 @@ jobs:
       - name: runcode
         run: |
           python ./me/personal/perform_calc/run_code.py
+          python ./me/personal/perform_calc/run_code_two.py
           
 
 

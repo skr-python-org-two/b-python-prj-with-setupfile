@@ -17,15 +17,23 @@ import setuptools
 #     GH_TOKEN = os.getenv("GH_USERNAME")+ ":" +os.getenv("GH_TOKEN")
 #     print(f"##### GH_TOKEN is :::: {GH_TOKEN}")
 
+
 GH_USERNAME = os.getenv("GH_USERNAME")
 GH_TOKEN = os.getenv("GH_TOKEN")
+
+
+
 
 PACKAGE_REQUIREMENTS = [
     "PyYAML==6.0",
     "pysftp==0.2.9",
     "boto3==1.34.51",
     "wheel",
-    f"python-generic-functon-library @ git+https://{GH_USERNAME}:{GH_TOKEN}@github.com/skr-python-org-two/python-generic-functon-library.git@v1.0.4"
+    # success #
+    f"python-generic-functon-library @ git+https://{GH_USERNAME}:{GH_TOKEN}@github.com/skr-python-org-two/python-generic-functon-library.git@v1.0.5",
+    # success #f"python-generic-functon-library @ git+https://{GH_USERNAME}:{GH_TOKEN}@github.com/skr-python-org-two/python-generic-functon-library.git@v1.0.5#egg=my-python-lib"
+    # Failed # f"python-custom-library @ git+https://{GH_USERNAME}:{GH_TOKEN}@github.com/skr-python-org-two/python-generic-functon-library.git@v1.0.5"
+    f"python-generic-functon-library-two-custom-code @ git+https://{GH_USERNAME}:{GH_TOKEN}@github.com/skr-python-org-two/python-generic-functon-library-two.git@v1.0.0",
 ]
 
 DEV_REQUIREMENTS = [

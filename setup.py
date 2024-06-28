@@ -3,7 +3,7 @@ import pathlib
 #import subprocess
 #import sys
 import setuptools
-from dotenv import load_dotenv
+
 
 #def install(package):
 #    subprocess.check_call([sys.excutable,"-m","pip","install",package])
@@ -75,6 +75,7 @@ setuptools.setup(
 
 )
 
+from dotenv import load_dotenv
 
 load_dotenv(f"current_dir/.env_dev")
 print(os.getenv("VAR_A"))

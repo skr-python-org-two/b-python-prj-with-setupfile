@@ -75,6 +75,9 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -e ".[dev]"
+      - name: List installedDependencies With Their Installed Path
+        run: |
+          pip list -v
       - name: runcode
         run: |
           python ./me/personal/perform_calc/run_code.py

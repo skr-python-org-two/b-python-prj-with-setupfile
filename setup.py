@@ -3,6 +3,7 @@ import pathlib
 #import subprocess
 #import sys
 import setuptools
+from dotenv import load_dotenv
 
 #def install(package):
 #    subprocess.check_call([sys.excutable,"-m","pip","install",package])
@@ -47,6 +48,11 @@ DEV_REQUIREMENTS = [
 current_dir = pathlib.Path(__file__).parent.resolve()
 #long_description = (current_dir / 'README.md').read_txt(encoding="utf-8")
 long_description = "test project "
+
+load_dotenv(f"current_dir/.env_dev")
+print(os.getenv("VAR_A"))
+print(os.getenv("VAR_B"))
+print(os.getenv("VAR_C"))
 
 setuptools.setup(
     name="b-python-prj-with-setupfile",

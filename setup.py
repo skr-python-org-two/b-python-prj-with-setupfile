@@ -48,6 +48,7 @@ DEV_REQUIREMENTS = [
 current_dir = pathlib.Path(__file__).parent.resolve()
 #long_description = (current_dir / 'README.md').read_txt(encoding="utf-8")
 long_description = "test project "
+os.environ["PROJ_BASE_DIR"] = str(current_dir)
 
 
 setuptools.setup(
@@ -75,9 +76,3 @@ setuptools.setup(
 
 )
 
-from dotenv import load_dotenv
-
-load_dotenv(f"current_dir/.env_dev")
-print(os.getenv("VAR_A"))
-print(os.getenv("VAR_B"))
-print(os.getenv("VAR_C"))

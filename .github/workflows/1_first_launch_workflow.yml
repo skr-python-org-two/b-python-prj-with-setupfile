@@ -60,7 +60,8 @@ jobs:
     environment: ${{ inputs.environment }}
     runs-on: ubuntu-latest
     env:
-      env_var_b : "def"
+      env : ${{ inputs.environment }}
+      dummy_var : "dummy value"
       GH_USERNAME: ${{ secrets.GH_USERNAME }}
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
       GH_BASE_DIR: ${{ vars.GH_BASE_DIR }}

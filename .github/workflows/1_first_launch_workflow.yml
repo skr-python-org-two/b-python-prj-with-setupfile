@@ -23,6 +23,7 @@ jobs:
       env_var_a : "abc"
       GH_USERNAME: ${{ secrets.GH_USERNAME }}
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      GH_BASE_DIR: ${{ secrets.GH_BASE_DIR }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -53,15 +54,17 @@ jobs:
           pytest me/personal --cov
       - name: List environment Variables
         run: |
-          python ./me/personal/perform_calc/run_env_vars.py
+          python ./me/personal/perform_calc/print_environment_variables.py
   run:
     needs: build
     environment: ${{ inputs.environment }}
     runs-on: ubuntu-latest
     env:
-      env_var_b : "def"
+      env : ${{ inputs.environment }}
+      dummy_var : "dummy value"
       GH_USERNAME: ${{ secrets.GH_USERNAME }}
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      GH_BASE_DIR: ${{ vars.GH_BASE_DIR }}
     steps:
       - name: checkout repository
         uses: actions/checkout@v3
@@ -82,7 +85,8 @@ jobs:
         run: |
           python ./me/personal/perform_calc/run_code.py
           python ./me/personal/perform_calc/run_code_two.py
-          python ./me/personal/perform_calc/run_code_env.py
+          python ./me/personal/perform_calc/load_environment_vars.py
+          python ./me/personal/perform_calc/load_environment_vars_two.py
           
 
 

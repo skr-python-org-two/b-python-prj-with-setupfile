@@ -1,8 +1,9 @@
 import os
 
 def __main__():
+    print("### from print_environment_variables file")
     os.environ['first_var'] = 'hello'
-    print(" ### from run_env_vars")
+
     for key , value in os.environ.items():
         print(f"{key}    {value}")
 

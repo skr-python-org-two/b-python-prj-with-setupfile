@@ -23,8 +23,6 @@ GH_USERNAME = os.getenv("GH_USERNAME")
 GH_TOKEN = os.getenv("GH_TOKEN")
 
 
-
-
 PACKAGE_REQUIREMENTS = [
     "PyYAML==6.0",
     "pysftp==0.2.9",
@@ -48,7 +46,12 @@ DEV_REQUIREMENTS = [
 current_dir = pathlib.Path(__file__).parent.resolve()
 #long_description = (current_dir / 'README.md').read_txt(encoding="utf-8")
 long_description = "test project "
-os.environ["PROJ_BASE_DIR"] = str(current_dir)
+#os.environ["PROJ_BASE_DIR"] = str(current_dir)
+#print(f"current_dir value is :::: {current_dir}")
+#b=25
+#sprint(f"value of b is :::: {b}")
+
+
 
 
 setuptools.setup(
@@ -72,7 +75,9 @@ setuptools.setup(
     package_data = {
         'me.personal': ['*.csv' , '*.json']
     }
-
-
 )
+
+
+os.environ["PROJ_BASE_DIR"] = str(current_dir)
+print(f"current_dir value is :::: {current_dir}")
 

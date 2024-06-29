@@ -11,6 +11,7 @@ def __main__():
     print(s_sub_square(40,50))
     current_dir = pathlib.Path(__file__).parent.resolve()
     print(f"### {current_dir}")
+    print(type(current_dir))
 
 
 if __name__ == "__main__" :

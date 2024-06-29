@@ -48,6 +48,8 @@ current_dir = pathlib.Path(__file__).parent.resolve()
 long_description = "test project "
 os.environ["PROJ_BASE_DIR"] = str(current_dir)
 print(f"current_dir value is :::: {current_dir}")
+b=25
+print(f"value of b is :::: {b}")
 
 
 setuptools.setup(

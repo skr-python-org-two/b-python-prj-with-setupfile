@@ -6,7 +6,7 @@ import pathlib
 
 
 def __main__():
-    print("## from main method")
+    print("## from main method in run_code_two.py")
     print(s_add_square(10,30))
     print(s_sub_square(40,50))
     current_dir = pathlib.Path(__file__).parent.resolve()

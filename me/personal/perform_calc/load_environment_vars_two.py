@@ -4,7 +4,7 @@ import os
 
 
 def main():
-    print("### from run_code_env_two file")
+    print("### from load_environment_vars_two file")
     print(os.getenv("GH_BASE_DIR"))
     BDIR_value = os.getenv("GH_BASE_DIR")
     env_value = os.getenv("env")

@@ -63,7 +63,7 @@ jobs:
       env_var_b : "def"
       GH_USERNAME: ${{ secrets.GH_USERNAME }}
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
-      GH_BASE_DIR: ${{ secrets.GH_BASE_DIR }}
+      GH_BASE_DIR: ${{ vars.GH_BASE_DIR }}
     steps:
       - name: checkout repository
         uses: actions/checkout@v3

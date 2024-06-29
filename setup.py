@@ -71,10 +71,9 @@ setuptools.setup(
     package_data = {
         'me.personal': ['*.csv' , '*.json']
     }
-
-
 )
 
 
 os.environ["PROJ_BASE_DIR"] = str(current_dir)
 print(f"current_dir value is :::: {current_dir}")
+

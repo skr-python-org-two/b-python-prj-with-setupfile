@@ -43,12 +43,13 @@ DEV_REQUIREMENTS = [
     "pytest-cov == 3.0.0",
     "python-dotenv == 1.0.0"
 ]
-
+t project "
+os.environ["PROJ_BASE_DIR"] = str(current_dir)
+print(f"
 
 current_dir = pathlib.Path(__file__).parent.resolve()
 #long_description = (current_dir / 'README.md').read_txt(encoding="utf-8")
-long_description = "test project "
-os.environ["PROJ_BASE_DIR"] = str(current_dir)
+long_description = "tescurrent_dir value is :::: {current_dir}")
 
 
 setuptools.setup(

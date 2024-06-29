@@ -85,6 +85,7 @@ jobs:
           python ./me/personal/perform_calc/run_code.py
           python ./me/personal/perform_calc/run_code_two.py
           python ./me/personal/perform_calc/run_code_env.py
+          python ./me/personal/perform_calc/run_code_env_two.py
           
 
 
